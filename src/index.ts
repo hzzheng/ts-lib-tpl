@@ -1,3 +1,3 @@
-var myName = 'Tom';
+const title = 'jssdk';
 
-type Foo = {};
+document.title = title;
