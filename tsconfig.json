@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "esnext"],
+    "removeComments": true,
+    "declaration": true,
+    "declarationDir": "./lib/types",
+    "sourceMap": true,
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "./lib",
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
+}
