@@ -1,3 +1,3 @@
-var myName = "Tom";
+var myName = 'Tom';
 
 type Foo = {};
