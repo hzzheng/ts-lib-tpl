@@ -1,3 +1,11 @@
+/*
+ * @Author: zhengchao
+ * @Date: 2020-09-27 09:38:03
+ * @LastEditors: zhengchao
+ * @LastEditTime: 2020-09-27 09:50:50
+ * @Description: 单元测试示例
+ */
+
 import request from '../../src/network/request';
 
 describe('network', () => {
