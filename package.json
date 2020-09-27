@@ -10,7 +10,8 @@
     "build": "rollup -c",
     "test": "jest --coverage --verbose -u",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepublishOnly": "yarn lint & yarn test & yarn build"
   },
   "keywords": [],
   "author": "",
@@ -27,12 +28,18 @@
     }
   },
   "lint-staged": {
-    "*.{.ts,.js}": [
+    "**/*.ts": [
       "eslint --fix",
       "prettier --write",
-      "npm run test --"
+      "yarn test"
     ]
   },
+  "files": [
+    "lib",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
