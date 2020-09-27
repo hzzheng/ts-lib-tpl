@@ -6,7 +6,7 @@
   "module": "lib/esm.js",
   "umd:main": "lib/umd.js",
   "scripts": {
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint --ext .ts src test",
     "build": "rollup -c",
     "test": "jest --coverage --verbose -u",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
@@ -20,7 +20,22 @@
       "path": "node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{.ts,.js}": [
+      "eslint --fix",
+      "prettier --write",
+      "npm run test --"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@types/jest": "^26.0.14",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
@@ -31,7 +46,9 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "rollup": "^2.28.2",
     "rollup-plugin-typescript2": "^0.27.3",
