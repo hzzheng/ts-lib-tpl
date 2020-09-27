@@ -1,0 +1,37 @@
+---
+name: getBatteryInfo
+route: /device/getBatteryInfo
+menu: device
+---
+
+# getBatteryInfo
+
+## usage
+
+```tyepscript
+interface Params {
+  [key: string]: string | number;
+}
+export interface Request {
+  (url: string, method?: string, params?: Params): Promise<{
+    errorCode: number;
+    result: { method?: string; params?: Params };
+  }>;
+}
+
+const request: Request = (url, method = 'GET', params = {}) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        errorCode: 0,
+        result: {
+          method,
+          params,
+        },
+      });
+    }, 1000);
+  });
+};
+
+export default request;
+```
