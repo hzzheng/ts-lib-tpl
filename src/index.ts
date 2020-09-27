@@ -1,3 +1,5 @@
-const title = 'jssdk';
+import request from './network/request';
 
-document.title = title;
+export default {
+  request,
+};

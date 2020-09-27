@@ -1,12 +1,12 @@
 const eslintrc = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   env: {
     browser: true,
     node: true,
@@ -14,13 +14,13 @@ const eslintrc = {
   },
   parserOptions: {
     ecmaVersion: 2019,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
     },
   },
   rules: {
-    "no-var": "error",
+    'no-var': 'error',
   },
 };
 
