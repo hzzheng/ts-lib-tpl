@@ -2,7 +2,7 @@
  * @Author: zhengchao
  * @Date: 2020-09-27 08:33:39
  * @LastEditors: zhengchao
- * @LastEditTime: 2020-09-27 09:03:32
+ * @LastEditTime: 2020-09-27 09:50:05
  * @Description: 代码示例
  */
 
@@ -26,7 +26,7 @@ const request: Request = (url, method = 'GET', params = {}) => {
           params,
         },
       });
-    }, 3000);
+    }, 1000);
   });
 };
 
