@@ -11,7 +11,10 @@
     "test": "jest --coverage --verbose -u",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "commit": "git-cz",
-    "prepublishOnly": "yarn lint & yarn test & yarn build"
+    "prepublishOnly": "yarn lint & yarn test & yarn build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "keywords": [],
   "author": "",
@@ -63,6 +66,9 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
+    "docz": "^2.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "tslib": "^2.0.1"
   }
 }

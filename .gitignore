@@ -14,3 +14,6 @@ lib/
 
 # Test Coverage
 coverage/
+
+# Docz
+.docz/
