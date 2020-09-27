@@ -4,7 +4,6 @@
     "lib": ["dom", "esnext"],
     "removeComments": true,
     "declaration": true,
-    "sourceMap": true,
     "strict": true,
     "baseUrl": "./",
     "outDir": "./lib",
