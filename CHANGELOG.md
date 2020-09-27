@@ -1,3 +1,7 @@
+---
+name: CHANELOG
+---
+
 ## [0.1.2](https://github.com/hzzheng/ts-lib-tpl/compare/v0.1.1...v0.1.2) (2020-09-27)
 
 ### Features

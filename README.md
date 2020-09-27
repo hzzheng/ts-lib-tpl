@@ -1,10 +1,5 @@
-## 客户端 JS-SDK
+---
+name: README
 ---
 
-### 网络
-
-- request
-
-### 设备
-
-- getBatteryInfo
+### JS-SDK
