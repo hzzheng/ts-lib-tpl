@@ -22,6 +22,7 @@ const eslintrc = {
   },
   rules: {
     'no-var': 'error',
+    'no-console': 'error',
   },
 };
 

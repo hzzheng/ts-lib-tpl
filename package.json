@@ -1,7 +1,7 @@
 {
   "name": "jssdk",
   "version": "0.1.2",
-  "description": "",
+  "description": "hexin jssdk",
   "main": "lib/index.js",
   "module": "lib/esm.js",
   "umd:main": "lib/umd.js",
@@ -11,6 +11,7 @@
     "test": "jest --coverage --verbose -u",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "commit": "git-cz",
+    "api": "api-extractor run",
     "prepublishOnly": "yarn lint & yarn test & yarn build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
@@ -26,15 +27,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "lint-staged && yarn test",
       "commit-msg": "commitlint -e $GIT_PARAMS"
     }
   },
   "lint-staged": {
     "**/*.ts": [
       "eslint --fix",
-      "prettier --write",
-      "yarn test"
+      "prettier --write"
     ]
   },
   "files": [
@@ -51,6 +51,7 @@
     "@typescript-eslint/parser": "^4.2.0",
     "commitizen": "^4.2.1",
     "conventional-changelog-cli": "^2.1.0",
+    "core-js": "^3.6.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.12.0",
@@ -61,6 +62,7 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "rollup": "^2.28.2",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.3",
     "ts-jest": "^26.4.0",
     "typescript": "^4.0.3"
